@@ -1,0 +1,19 @@
+﻿<h3>QuestionList</h3>
+@code {
+    [Parameter]
+    public List<Question> Questions { get; set; }
+}
+
+@foreach (var question in Questions)
+{
+    <QuestionCard QuestionText="@question.QuestionText" Options="@question.Options" DifficultyLevel="@question.DifficultyLevel" />
+}
+
+@code {
+    public class Question
+    {
+        public string QuestionText { get; set; }
+        public List<string> Options { get; set; }
+        public string DifficultyLevel { get; set; }
+    }
+}

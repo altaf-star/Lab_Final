@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CLO2.props" />
+</Project>
